@@ -1,0 +1,16 @@
+package com.example.automationservice.service;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients(basePackages = "lk.ijse.gdse71.automationservice.client")
+public class AutomationServiceApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(AutomationServiceApplication.class, args);
+	}
+
+}
